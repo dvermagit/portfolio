@@ -49,7 +49,7 @@ const ContactForm = () => {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50"
+          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50 transition-all duration-300"
           placeholder="Your name"
         />
       </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50"
+          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50 transition-all duration-300"
           placeholder="your.email@example.com"
         />
       </div>
@@ -81,7 +81,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           rows={6}
-          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50"
+          className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-portfolio-lavender/50 transition-all duration-300"
           placeholder="Your message here..."
         />
       </div>
@@ -89,7 +89,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3 px-6 bg-portfolio-lavender hover:bg-portfolio-lavender/90 text-black font-medium rounded-lg transition-colors duration-200 disabled:opacity-70"
+        className="w-full py-3 px-6 bg-portfolio-lavender hover:bg-portfolio-lavender/90 text-black font-medium rounded-lg transition-all duration-200 disabled:opacity-70 hover:shadow-lg hover:shadow-portfolio-lavender/25 transform hover:-translate-y-1"
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>

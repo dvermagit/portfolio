@@ -16,20 +16,27 @@ const SkillCard = ({
 }: SkillCardProps) => {
   return (
     <div className={cn(
-      "glass-card p-6 hover:-translate-y-1 transition-all duration-300",
+      "glass-card p-6 hover:-translate-y-2 hover:border-white/20 transition-all duration-300",
       className
     )}>
       <h3 
-        className="text-lg font-semibold mb-3" 
+        className="text-lg font-semibold mb-4 inline-block" 
         style={{ color: accentColor }}
       >
-        {title}
+        <span className="relative">
+          {title}
+          <span 
+            className="absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full" 
+            style={{ backgroundColor: accentColor, opacity: 0.7 }}
+          ></span>
+        </span>
       </h3>
-      <ul className="space-y-2">
-        {skills.map((skill) => (
+      <ul className="space-y-3">
+        {skills.map((skill, index) => (
           <li 
             key={skill} 
-            className="flex items-center text-sm text-foreground/80"
+            className="flex items-center text-sm text-foreground/80 transition-all duration-300 hover:translate-x-1"
+            style={{ transitionDelay: `${index * 50}ms` }}
           >
             <span 
               className="mr-2 inline-block w-1.5 h-1.5 rounded-full" 

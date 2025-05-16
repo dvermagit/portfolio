@@ -1,4 +1,5 @@
 
+import { useEffect, useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -58,9 +59,21 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4 md:px-6">
-      <div className="container mx-auto max-w-6xl">
+    <div className="min-h-screen pt-32 pb-20 px-4 md:px-6 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-portfolio-lavender/10 blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-portfolio-mint/10 blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <SectionHeading
           title="Portfolio"
           subtitle="Check out some of my recent projects"
@@ -68,17 +81,21 @@ const Portfolio = () => {
           className="mb-16"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              liveLink={project.liveLink}
-              repoLink={project.repoLink}
-            />
+            <div 
+              key={index} 
+              className={`transition-all duration-700 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                technologies={project.technologies}
+                liveLink={project.liveLink}
+                repoLink={project.repoLink}
+              />
+            </div>
           ))}
         </div>
       </div>
