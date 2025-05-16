@@ -10,10 +10,13 @@ const Layout = () => {
 
   useEffect(() => {
     setIsVisible(false);
-    setTimeout(() => {
+    
+    const timer = setTimeout(() => {
       setIsVisible(true);
       window.scrollTo(0, 0);
     }, 100);
+    
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return (
