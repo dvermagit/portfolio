@@ -57,7 +57,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-portfolio-lavender to-portfolio-mint opacity-30 rounded-full blur-3xl"></div>
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-lavender/20 shadow-xl relative z-10">
                   <img
-                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80"
+                    src="https://i.postimg.cc/ZKng9NBj/dhruv-photo2.jpg"
                     alt="Dhruv Verma"
                     className="w-full h-full object-cover"
                   />
