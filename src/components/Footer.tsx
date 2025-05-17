@@ -32,7 +32,7 @@ const Footer = () => {
               <Twitter size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/in/dhruv-verma"
+              href="https://www.linkedin.com/in/dhruv-verma-73b2982b0"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-portfolio-lavender transition-colors"
