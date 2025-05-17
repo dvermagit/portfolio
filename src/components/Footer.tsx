@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-foreground/60">
-              &copy; {new Date().getFullYear()} Dhruv Verma. All rights reserved.
+              &copy; {new Date().getFullYear()} Dhruv Verma. All rights
+              reserved.
             </p>
           </div>
           <div className="flex space-x-6">
@@ -32,7 +32,7 @@ const Footer = () => {
               <Twitter size={18} />
             </a>
             <a
-              href="https://linkedin.com/in/dhruv-verma"
+              href="https://www.linkedin.com/in/dhruv-verma"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-portfolio-lavender transition-colors"
