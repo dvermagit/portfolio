@@ -1,6 +1,6 @@
-
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -10,6 +10,12 @@ const ContactForm = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("xjyOe5ijoKRT3fbBk");
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,20 +30,44 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission with a timeout
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    // Send the email using EmailJS
+    emailjs
+      .send(
+        "service_8npjjng", // Service ID
+        "template_w3hhlo7", // Template ID
+        templateParams
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        toast({
+          title: "Message failed to send",
+          description:
+            "There was an error sending your message. Please try again later.",
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
-    }, 1500);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">
           Name
@@ -53,7 +83,7 @@ const ContactForm = () => {
           placeholder="Your name"
         />
       </div>
-      
+
       <div>
         <label htmlFor="email" className="block text-sm font-medium mb-2">
           Email
@@ -69,7 +99,7 @@ const ContactForm = () => {
           placeholder="your.email@example.com"
         />
       </div>
-      
+
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2">
           Message
@@ -85,7 +115,7 @@ const ContactForm = () => {
           placeholder="Your message here..."
         />
       </div>
-      
+
       <button
         type="submit"
         disabled={isSubmitting}
