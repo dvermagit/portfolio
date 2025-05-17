@@ -16,6 +16,12 @@ const ContactForm = () => {
     // Initialize EmailJS with your public key
     emailjs.init("xjyOe5ijoKRT3fbBk");
   }, []);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("xjyOe5ijoKRT3fbBk");
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,6 +73,7 @@ const ContactForm = () => {
   };
 
   return (
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
     <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">
