@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -46,10 +45,7 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-        <Link
-          to="/"
-          className="text-xl font-bold text-gradient"
-        >
+        <Link to="/" className="text-xl font-bold text-gradient">
           Dhruv Verma
         </Link>
 
@@ -110,5 +106,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
+console.log("hello");
 export default Navbar;
