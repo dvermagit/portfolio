@@ -106,5 +106,5 @@ const Navbar = () => {
     </nav>
   );
 };
-console.log("hello");
+
 export default Navbar;
