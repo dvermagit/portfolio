@@ -29,5 +29,5 @@ const SectionHeading = ({
     </div>
   );
 };
-console.log("hello");
+
 export default SectionHeading;
