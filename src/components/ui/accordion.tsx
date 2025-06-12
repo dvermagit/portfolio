@@ -52,5 +52,4 @@ const AccordionContent = React.forwardRef<
 ));
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
-console.log(AccordionContent.displayName);
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
