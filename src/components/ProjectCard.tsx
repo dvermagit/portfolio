@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 
 type Technology = {
@@ -26,14 +25,16 @@ const ProjectCard = ({
   className,
 }: ProjectCardProps) => {
   return (
-    <div className={cn(
-      "group glass-card overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-white/20",
-      className
-    )}>
+    <div
+      className={cn(
+        "group glass-card overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-white/20",
+        className
+      )}
+    >
       <div className="aspect-video overflow-hidden relative">
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-10"></div>
-        
+
         <img
           src={image}
           alt={title}
@@ -43,7 +44,7 @@ const ProjectCard = ({
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-sm text-foreground/70 mb-4">{description}</p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech) => (
             <span
@@ -55,7 +56,7 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        
+
         <div className="flex gap-4">
           {liveLink && (
             <a
