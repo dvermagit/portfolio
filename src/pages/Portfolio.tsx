@@ -3,6 +3,25 @@ import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 const projects = [
   {
+    title: "Docdrift",
+    description: "Don't just read docs. Converse with them.",
+    image:
+      "https://play-lh.googleusercontent.com/Php_2ABAPcZ6uKCWYEBYLoHekP-ByiDnrhnSuL-tpZBP7zzUAku-CfpjVupEToy8yg",
+    technologies: [
+      { name: "Next.js", color: "#61dafb" },
+      { name: "TypeScript", color: "#3178c6" },
+      { name: "ai", color: "#339933" },
+      { name: "LangChain", color: "#c69cf4" },
+      { name: "PineconeDb", color: "#47a248" },
+      { name: "Stripe", color: "#e96e50" },
+      { name: "Vercel", color: "#00e699" },
+      { name: "Tailwind", color: "#ff6384" },
+      { name: "Documentation", color: "#f2e2d9" },
+    ],
+    liveLink: "https://docdrift.vercel.app",
+    repoLink: "https://github.com/dvermagit/DocuMind",
+  },
+  {
     title: "Dropify",
     description:
       "A file storage application built with Next.js, Clerk for authentication, Neon PostgreSQL, and Drizzle ORM.",
@@ -32,22 +51,6 @@ const projects = [
     liveLink: "https://dhruvwork.online",
     repoLink: "https://github.com/dvermagit/portfolio",
   },
-  // {
-  //   title: "TaskFlow",
-  //   description:
-  //     "A task management application with features like drag-and-drop, labels, due dates, and team collaboration.",
-  //   image:
-  //     "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&q=80",
-  //   technologies: [
-  //     { name: "React", color: "#61dafb" },
-  //     { name: "Node.js", color: "#339933" },
-  //     { name: "MongoDB", color: "#47a248" },
-  //     { name: "Express", color: "#000000" },
-  //     { name: "Socket.io", color: "#f2e2d9" },
-  //   ],
-  //   liveLink: "https://taskflow-app.vercel.app",
-  //   repoLink: "https://github.com/dvermagit/taskflow",
-  // },
   // {
   //   title: "Weather Dashboard",
   //   description:
