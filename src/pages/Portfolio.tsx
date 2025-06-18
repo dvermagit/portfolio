@@ -15,6 +15,7 @@ const projects = [
       { name: "PineconeDb", color: "#47a248" },
       { name: "Stripe", color: "#e96e50" },
       { name: "Vercel", color: "#00e699" },
+      { name: "AWS S3", color: "#9cf4df" },
       { name: "Tailwind", color: "#ff6384" },
       { name: "Documentation", color: "#f2e2d9" },
     ],
