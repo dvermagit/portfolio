@@ -37,7 +37,8 @@ const About = () => {
               <div className="aspect-square rounded-xl overflow-hidden mb-6 border-2 border-portfolio-lavender/20 shadow-xl relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-portfolio-lavender/20 to-portfolio-mint/20 opacity-50"></div>
                 <img
-                  src="https://i.postimg.cc/ZKng9NBj/dhruv-photo2.jpg"
+                  // src="https://i.postimg.cc/ZKng9NBj/dhruv-photo2.jpg"
+                  src="https://i.postimg.cc/MH4Gbj8v/1753699502062.jpg"
                   alt="Dhruv Verma"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />

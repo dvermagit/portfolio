@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
@@ -23,19 +22,26 @@ const Home = () => {
 
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div className={`w-full md:w-1/2 space-y-6 text-center md:text-left transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`w-full md:w-1/2 space-y-6 text-center md:text-left transition-all duration-700 ${
+                isLoaded
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
               <span className="inline-block py-1 px-3 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-portfolio-lavender">
                 Full Stack Developer
               </span>
-              
+
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Hi, I'm <span className="text-gradient">Dhruv Verma</span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-foreground/80">
-                Building scalable, reliable, and secure software with great user experiences.
+                Building scalable, reliable, and secure software with great user
+                experiences.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 <Link
                   to="/portfolio"
@@ -51,13 +57,19 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            
-            <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+
+            <div
+              className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-700 delay-300 ${
+                isLoaded
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-portfolio-lavender to-portfolio-mint opacity-30 rounded-full blur-3xl"></div>
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-lavender/20 shadow-xl relative z-10">
                   <img
-                    src="https://i.postimg.cc/ZKng9NBj/dhruv-photo2.jpg"
+                    src="https://i.postimg.cc/MH4Gbj8v/1753699502062.jpg"
                     alt="Dhruv Verma"
                     className="w-full h-full object-cover"
                   />
@@ -72,12 +84,18 @@ const Home = () => {
       </section>
 
       {/* Enhanced Scroll Down Indicator */}
-      <div className={`flex justify-center pb-8 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        className={`flex justify-center pb-8 transition-all duration-700 delay-500 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <a
           href="#featured-projects"
           className="flex flex-col items-center text-foreground/60 hover:text-portfolio-lavender transition-colors group"
         >
-          <span className="text-sm mb-2 transition-transform group-hover:-translate-y-1 duration-300">Scroll Down</span>
+          <span className="text-sm mb-2 transition-transform group-hover:-translate-y-1 duration-300">
+            Scroll Down
+          </span>
           <div className="p-2 rounded-full bg-white/5 border border-white/10 group-hover:border-portfolio-lavender/30 transition-all duration-300">
             <ArrowDown size={20} className="animate-bounce" />
           </div>
@@ -87,8 +105,8 @@ const Home = () => {
       {/* Featured Projects Section */}
       <section id="featured-projects" className="py-20 px-4 md:px-6 bg-white/5">
         <div className="container mx-auto max-w-5xl">
-          <SectionHeading 
-            title="Featured Projects" 
+          <SectionHeading
+            title="Featured Projects"
             subtitle="Here are some of my recent projects that showcase my skills and expertise."
             align="center"
           />
@@ -105,10 +123,14 @@ const Home = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Dropify</h3>
                 <p className="text-sm text-foreground/70 mb-4">
-                  A file storage application built with Next.js, Clerk, Neon, Drizzle, and HeroUI.
+                  A file storage application built with Next.js, Clerk, Neon,
+                  Drizzle, and HeroUI.
                 </p>
                 <div className="flex gap-3">
-                  <a href="#" className="text-xs font-medium text-foreground/90 hover:text-portfolio-lavender transition-colors">
+                  <a
+                    href="#"
+                    className="text-xs font-medium text-foreground/90 hover:text-portfolio-lavender transition-colors"
+                  >
                     Learn More →
                   </a>
                 </div>
@@ -126,10 +148,14 @@ const Home = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Portfolio Website</h3>
                 <p className="text-sm text-foreground/70 mb-4">
-                  Modern portfolio website built with React, Tailwind CSS, and Framer Motion.
+                  Modern portfolio website built with React, Tailwind CSS, and
+                  Framer Motion.
                 </p>
                 <div className="flex gap-3">
-                  <a href="#" className="text-xs font-medium text-foreground/90 hover:text-portfolio-lavender transition-colors">
+                  <a
+                    href="#"
+                    className="text-xs font-medium text-foreground/90 hover:text-portfolio-lavender transition-colors"
+                  >
                     Learn More →
                   </a>
                 </div>
