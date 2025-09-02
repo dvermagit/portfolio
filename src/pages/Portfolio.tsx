@@ -23,7 +23,7 @@ const projects = [
     repoLink: "https://github.com/dvermagit/agentive",
   },
   {
-    title: "Docdrift",
+    title: "DocuMind",
     description: "Don't just read docs. Converse with them.",
     image:
       "https://play-lh.googleusercontent.com/Php_2ABAPcZ6uKCWYEBYLoHekP-ByiDnrhnSuL-tpZBP7zzUAku-CfpjVupEToy8yg",
