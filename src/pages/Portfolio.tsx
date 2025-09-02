@@ -4,7 +4,8 @@ import SectionHeading from "@/components/SectionHeading";
 const projects = [
   {
     title: "Agentive",
-    description: "Don't just read docs. Converse with them.",
+    description:
+      "An AI agent powered tool that analyzes YouTube videos, generates transcripts, and suggests titles and thumbnails.",
     image:
       "https://i.postimg.cc/pLPrSSNC/Screenshot-2025-08-29-at-12-09-00-AM.png",
     technologies: [
