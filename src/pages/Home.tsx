@@ -140,16 +140,15 @@ const Home = () => {
             <div className="glass-card overflow-hidden group">
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                  src="https://play-lh.googleusercontent.com/Php_2ABAPcZ6uKCWYEBYLoHekP-ByiDnrhnSuL-tpZBP7zzUAku-CfpjVupEToy8yg"
                   alt="Portfolio Project"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Portfolio Website</h3>
+                <h3 className="text-xl font-bold mb-2">DocuMind</h3>
                 <p className="text-sm text-foreground/70 mb-4">
-                  Modern portfolio website built with React, Tailwind CSS, and
-                  Framer Motion.
+                  Don't just read docs. Converse with them.
                 </p>
                 <div className="flex gap-3">
                   <a
