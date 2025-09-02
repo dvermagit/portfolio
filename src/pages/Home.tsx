@@ -115,16 +115,16 @@ const Home = () => {
             <div className="glass-card overflow-hidden group">
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                  src="https://i.postimg.cc/pLPrSSNC/Screenshot-2025-08-29-at-12-09-00-AM.png"
                   alt="Dropify Project"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Dropify</h3>
+                <h3 className="text-xl font-bold mb-2">Agentive</h3>
                 <p className="text-sm text-foreground/70 mb-4">
-                  A file storage application built with Next.js, Clerk, Neon,
-                  Drizzle, and HeroUI.
+                  An AI agent powered tool that analyzes YouTube videos,
+                  generates transcripts, and suggests titles and thumbnails.
                 </p>
                 <div className="flex gap-3">
                   <a
