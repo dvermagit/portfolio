@@ -3,6 +3,26 @@ import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 const projects = [
   {
+    title: "Agentive",
+    description: "Don't just read docs. Converse with them.",
+    image:
+      "https://i.postimg.cc/pLPrSSNC/Screenshot-2025-08-29-at-12-09-00-AM.png",
+    technologies: [
+      { name: "Next.js", color: "#61dafb" },
+      { name: "TypeScript", color: "#3178c6" },
+      { name: "AI Agent", color: "#c69cf4" },
+      { name: "RAGs", color: "#f2e2d9" },
+      { name: "Convex", color: "#47a248" },
+      { name: "Google GenAI", color: "#339933" },
+      { name: "Stripe", color: "#e96e50" },
+      { name: "Schematic", color: "#00e699" },
+      { name: "Hugging Face", color: "#9cf4df" },
+      { name: "Tailwind", color: "#ff6384" },
+    ],
+    liveLink: "https://agentive-ten.vercel.app",
+    repoLink: "https://github.com/dvermagit/agentive",
+  },
+  {
     title: "Docdrift",
     description: "Don't just read docs. Converse with them.",
     image:
